@@ -1,0 +1,23 @@
+{
+  "name": "semantic-release-dart",
+  "version": "1.0.0",
+  "description": "Semantic Release Plugin for Dart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themizzi/semantic-release-dart.git"
+  },
+  "keywords": [
+    "dart",
+    "semantic-release"
+  ],
+  "author": "Joe Mizzi <themizzi@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themizzi/semantic-release-dart/issues"
+  },
+  "homepage": "https://github.com/themizzi/semantic-release-dart#readme"
+}

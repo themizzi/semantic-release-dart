@@ -2,9 +2,16 @@
   "name": "semantic-release-dart",
   "version": "1.0.0",
   "description": "Semantic Release Plugin for Dart",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run check",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,9 +22,27 @@
     "semantic-release"
   ],
   "author": "Joe Mizzi <themizzi@me.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/themizzi/semantic-release-dart/issues"
   },
-  "homepage": "https://github.com/themizzi/semantic-release-dart#readme"
+  "homepage": "https://github.com/themizzi/semantic-release-dart#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^13.11.1",
+    "@types/semantic-release": "^17.1.0",
+    "@types/stream-buffers": "^3.0.3",
+    "@types/tempy": "^0.3.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "gts": "^2.0.2",
+    "jest": "^26.4.2",
+    "stream-buffers": "^3.0.2",
+    "tempy": "^0.6.0",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/yaml": "^1.9.7",
+    "yaml": "^1.10.0"
+  }
 }

@@ -1,0 +1,4 @@
+{
+  "plugins": ["jest"],
+  "extends": ["./node_modules/gts/", "plugin:jest/all"]
+}

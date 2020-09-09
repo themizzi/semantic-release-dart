@@ -1,6 +1,7 @@
 // eslint-disable-next-line node/no-unpublished-import
 import tempy from 'tempy';
 import {join} from 'path';
+// eslint-disable-next-line node/no-unpublished-import
 import yaml from 'yaml';
 import {prepare} from '../src';
 import {writeFileSync, readFileSync} from 'fs';

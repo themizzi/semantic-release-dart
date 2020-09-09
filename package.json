@@ -11,7 +11,8 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -28,14 +29,20 @@
   },
   "homepage": "https://github.com/themizzi/semantic-release-dart#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/prompt": "^8.2.0",
     "@types/jest": "^26.0.13",
     "@types/node": "^13.13.17",
     "@types/semantic-release": "^17.1.0",
     "@types/stream-buffers": "^3.0.3",
     "@types/tempy": "^0.3.0",
     "@types/yaml": "^1.9.7",
+    "commitizen": "^4.0.3",
     "eslint-plugin-jest": "^24.0.0",
+    "git-cz": "^3.3.0",
     "gts": "^2.0.2",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
     "stream-buffers": "^3.0.2",
     "tempy": "^0.6.0",
@@ -58,5 +65,16 @@
         "prerelease": true
       }
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

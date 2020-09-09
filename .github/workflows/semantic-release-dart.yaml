@@ -32,8 +32,6 @@ jobs:
 
     needs: build
 
-    if: github.ref == 'refs/heads/master'
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v1
